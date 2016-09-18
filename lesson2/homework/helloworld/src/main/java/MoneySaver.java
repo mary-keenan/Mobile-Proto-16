@@ -27,12 +27,12 @@ public class MoneySaver {
 
     public void deposit(long deposit_amount) {
         myAccount.deposit_money(deposit_amount);
+        this.myMoney -= deposit_amount;
     }
 
     public void withdraw(long withdraw_amount) {
-         myAccount.withdraw_moolah(withdraw_amount);
-        //((CheckingAccount(myAccount)).withdraw_moolah(withdraw_amount);
-
+        myAccount.withdraw_moolah(withdraw_amount);
+        this.myMoney += withdraw_amount;
     }
 
     public void signUpForChecking(long amount) {
