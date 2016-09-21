@@ -26,6 +26,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Your brackets are in kinda funky places
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
