@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lesson_3</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="length">75dp</string>
+    <string name="saved_background_default">#ffffff</string>
+    <string name="saved_background">key</string>
+    <!--<color name="red">#f00</color> //Color.RED-->
+    <!--<color name="blue">#00f</color> //Color.BLUE-->
+</resources>
