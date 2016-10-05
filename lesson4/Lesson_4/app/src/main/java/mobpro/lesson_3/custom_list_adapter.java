@@ -18,12 +18,9 @@ import butterknife.BindView;
  */
 
 public class custom_list_adapter extends ArrayAdapter {
-//    @BindView(R.id.tv_todo) TextView tvName;
-//    @BindView(R.id.editButton) Button edit_btn;
-//    @BindView(R.id.deleteButton) Button del_btn;
-
 
     private ArrayList<todo_items> todo_itemses;
+    // could delete this
     private Context context;
 
     public custom_list_adapter(Context context, int simple_list_item_1, ArrayList<todo_items> todo_itemses) {
@@ -85,6 +82,10 @@ public class custom_list_adapter extends ArrayAdapter {
                 dialog.dismiss(); //nothing is saved, they get out of popup
             }
         });
+        // You should change the text in the Array and then notify the adapter that it has changed.
+        // This works, but it could do something weird when you save your Todos in SQL/S3
+        // and then load them back in. In this case, the unedited todo would appear. Let me know
+        // If this makes sense, and if not we can chat during class.
         popup_maker.setPositiveButton("Set", new DialogInterface.OnClickListener() { //if they hit SET, it saves their change
             @Override
             public void onClick(DialogInterface dialog, int which) {
