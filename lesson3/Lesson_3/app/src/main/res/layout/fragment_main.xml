@@ -23,38 +23,38 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:text="To Do List"
+                android:text="@string/to_do_list"
                 android:id="@+id/textView_title"
                 android:textSize="32sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:text="First item"
+                android:text="@string/first_item"
                 android:id="@+id/textView" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:text="Second item"
+                android:text="@string/second_item"
                 android:id="@+id/textView1" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:text="Third item"
+                android:text="@string/third_item"
                 android:id="@+id/textView2" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:text="Fourth item"
+                android:text="@string/fourth_item"
                 android:id="@+id/textView3" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:text="Fifth item"
+                android:text="@string/fifth_item"
                 android:id="@+id/textView4" />
         </TableLayout>
 
@@ -62,7 +62,7 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings"
+            android:text="@string/settings"
             android:id="@+id/switchButton"
             android:layout_alignBottom="@+id/tableLayout"
             android:layout_alignParentLeft="true"

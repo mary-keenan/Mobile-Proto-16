@@ -5,4 +5,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="length">75dp</string>
+    <string name="to_do_list">To Do List</string>
+    <string name="first_item">First item</string>
+    <string name="second_item">Second item</string>
+    <string name="third_item">Third item</string>
+    <string name="fourth_item">Fourth item</string>
+    <string name="fifth_item">Fifth item</string>
+    <string name="settings">Settings</string>
+    <string name="change_background_color">Change background color</string>
+    <string name="back">Back</string>
+    <string name="blue">Blue</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
 </resources>

@@ -70,9 +70,5 @@ public class MainActivity extends AppCompatActivity {
     public void changeBackgroundColor(int COLOR) {
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(COLOR);
-
-
-
     }
-
 }

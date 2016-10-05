@@ -32,27 +32,7 @@ public class MainActivityFragment extends Fragment {
         first.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final AlertDialog.Builder popup_maker = new AlertDialog.Builder(getContext());
-                popup_maker //configure popup
-                        .setTitle("Do you want to change this list item?")
-                        .setMessage("Click SET to save your change.")
-                        .setCancelable(true);
-                final EditText field = new EditText(getContext());
-                popup_maker.setView(field);
-                popup_maker.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss(); //nothing is saved, they get out of popup
-                    }
-                });
-                popup_maker.setPositiveButton("Set", new DialogInterface.OnClickListener() { //if they hit SET, it saves their change
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        first.setText(field.getText().toString()); //sets text field to new text
-                    }
-                });
-                AlertDialog popup = popup_maker.create(); //make it
-                popup.show(); //show it
+                showAlertDialog(first);
             }
         });
         //second list item button/prompt
@@ -60,27 +40,7 @@ public class MainActivityFragment extends Fragment {
         second.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final AlertDialog.Builder popup_maker = new AlertDialog.Builder(getContext());
-                popup_maker //configure popup
-                        .setTitle("Do you want to change this list item?")
-                        .setMessage("Click SET to save your change.")
-                        .setCancelable(true);
-                final EditText field = new EditText(getContext());
-                popup_maker.setView(field);
-                popup_maker.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                popup_maker.setPositiveButton("Set", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        second.setText(field.getText().toString());
-                    }
-                });
-                AlertDialog popup = popup_maker.create();
-                popup.show();
+                showAlertDialog(second);
             }
         });
         //third list item button/prompt
@@ -88,27 +48,7 @@ public class MainActivityFragment extends Fragment {
         third.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final AlertDialog.Builder popup_maker = new AlertDialog.Builder(getContext());
-                popup_maker //configure popup
-                        .setTitle("Do you want to change this list item?")
-                        .setMessage("Click SET to save your change.")
-                        .setCancelable(true);
-                final EditText field = new EditText(getContext());
-                popup_maker.setView(field);
-                popup_maker.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                popup_maker.setPositiveButton("Set", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        third.setText(field.getText().toString());
-                    }
-                });
-                AlertDialog popup = popup_maker.create();
-                popup.show();
+                showAlertDialog(third);
             }
         });
         //fourth list item button/prompt
@@ -116,27 +56,7 @@ public class MainActivityFragment extends Fragment {
         fourth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final AlertDialog.Builder popup_maker = new AlertDialog.Builder(getContext());
-                popup_maker //configure popup
-                        .setTitle("Do you want to change this list item?")
-                        .setMessage("Click SET to save your change.")
-                        .setCancelable(true);
-                final EditText field = new EditText(getContext());
-                popup_maker.setView(field);
-                popup_maker.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                popup_maker.setPositiveButton("Set", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        fourth.setText(field.getText().toString());
-                    }
-                });
-                AlertDialog popup = popup_maker.create();
-                popup.show();
+                showAlertDialog(fourth);
             }
         });
         //fifth list item button/prompt
@@ -144,27 +64,7 @@ public class MainActivityFragment extends Fragment {
         fifth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final AlertDialog.Builder popup_maker = new AlertDialog.Builder(getContext());
-                popup_maker //configure popup
-                        .setTitle("Do you want to change this list item?")
-                        .setMessage("Click SET to save your change.")
-                        .setCancelable(true);
-                final EditText field = new EditText(getContext());
-                popup_maker.setView(field);
-                popup_maker.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                popup_maker.setPositiveButton("Set", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        fifth.setText(field.getText().toString());
-                    }
-                });
-                AlertDialog popup = popup_maker.create();
-                popup.show();
+                showAlertDialog(fifth);
             }
         });
         //Gives SWITCH button function -- creates listener that waits for a click and switches to Settings when clicked
@@ -180,16 +80,28 @@ public class MainActivityFragment extends Fragment {
 
         return view;
     }
-}
 
-//    Button switchToSettings = (Button) view.findViewById(R.id.switchButton); //instantiate prompt button w/ button id from fragment_main.xml
-//switchToSettings.setOnClickListener(new View.OnClickListener() {
-//@Override
-//public void onClick(View v) {
-//        Fragment fragment = new Fragment();
-//        android.support.v4.app.FragmentManager fragmentManager = getFragmentManager();
-//        fragmentManager.beginTransaction()
-//        .replace(R.id.settings_fragment, fragment)
-//        .commit();
-//        }
-//        });
+    private void showAlertDialog(final TextView textview) {
+        AlertDialog.Builder popup_maker = new AlertDialog.Builder(getContext());
+        popup_maker //configure popup
+                .setTitle("Do you want to change this list item?")
+                .setMessage("Click SET to save your change.")
+                .setCancelable(true);
+        final EditText field = new EditText(getContext());
+        popup_maker.setView(field);
+        popup_maker.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        popup_maker.setPositiveButton("Set", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                textview.setText(field.getText().toString());
+            }
+        });
+        AlertDialog popup = popup_maker.create();
+        popup.show();
+    }
+}
