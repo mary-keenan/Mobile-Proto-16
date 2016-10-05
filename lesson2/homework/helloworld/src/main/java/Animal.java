@@ -20,7 +20,8 @@ public abstract class Animal {
         species = n_species;
         weight = n_weight;
     }
-//Got dem setters
+
+    //Got dem setters
     public void setLegs(int value){
         legs = value;
     }
@@ -36,7 +37,8 @@ public abstract class Animal {
     public void setWeight(int value){
         weight = value;
     }
-//Got dem getters
+
+    //Got dem getters
     public int getLegs(){
         return legs;
     }
@@ -52,7 +54,8 @@ public abstract class Animal {
     public double getWeight(){
         return weight;
     }
-//Got dem abstract methods
+
+    //Got dem abstract methods
     abstract void grow();
 }
 
@@ -95,16 +98,18 @@ class Cow extends Animal {
 
 public class Farm {
 
+    private ArrayList<Animal> animals;
+
     public Farm(){
-        ArrayList animals = new ArrayList();
+        animals = new ArrayList<>();
     }
-    public void addAnimal(Object n_animal){
+    public void addAnimal(Animal n_animal){
         animals.add(n_animal);
     }
-    public Object getAnimal(int index){
-        return animals(index);
+    public Animal getAnimal(int index){
+        return animals.get(index);
     }
-    public ??? getHeaviestAnimals(){
+    public ArrayList<Animal> getHeaviestAnimals(){
 
     }
 

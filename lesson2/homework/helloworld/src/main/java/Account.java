@@ -36,8 +36,8 @@ public class Account {
 
 class CheckingAccount extends Account {
 
-    public CheckingAccount(long new_amount) { //returns null -- why doesn't it return the toString method?
-        super(new_amount); //doesn't seem to do anything, but I get errors when I take this line aways
+    public CheckingAccount(long new_amount) {
+        super(new_amount);
     }
 
     public String toString() {
