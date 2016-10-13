@@ -8,7 +8,8 @@ import android.provider.BaseColumns;
 
 //Got most of this code from the android developers page on databases
 public final class TodoReaderContract {
-    private TodoReaderContract(){
+
+    private TodoReaderContract() {
         //private constructor so you don't accidentally instantiate the class(?)
     }
     //defines the table contents

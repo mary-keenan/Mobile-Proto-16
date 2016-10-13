@@ -19,16 +19,22 @@ import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
  */
 
 public class custom_list_adapter extends ArrayAdapter {
+    /**
+     * This file should be named CustomListAdapter. Remember, Classes always begin with capital
+     * letters.
+     */
 //    @BindView(R.id.tv_todo) TextView tvName;
 //    @BindView(R.id.editButton) Button edit_btn;
 //    @BindView(R.id.deleteButton) Button del_btn;
 
 
     private ArrayList<TodoItem> todo_itemses;
-    private Context context;
+    private Context context; // you could get rid of this
 
-    public custom_list_adapter(Context context, int simple_list_item_1, ArrayList<TodoItem> todo_itemses) {
+    // Is there a reason you have this extra constructor argument? It could be removed.
+    public custom_list_adapter(Context context, ArrayList<TodoItem> todo_itemses) {
         super(context, 0, todo_itemses);
+        //lol sounds good
         this.todo_itemses = todo_itemses; //lol Android Studio suggested I name this variable todo_itemses so I went with it
         this.context = context; //set custom adapter's array list and context to MainActivityFragment's view
     }

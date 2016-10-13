@@ -48,7 +48,7 @@ public class MainActivityFragment extends Fragment {
         //set up to do list array list and adapter
         ArrayList<TodoItem> todo_array_list = dbHelper.getSQLData(); //creates empty array list 'todo_array_list'
         final custom_list_adapter todo_adapter =
-                new custom_list_adapter(getContext(), R.layout.todo_list, todo_array_list); //creates adapter to put 'todo_array_list' info into todo_list.xml
+                new custom_list_adapter(getContext(), todo_array_list); //creates adapter to put 'todo_array_list' info into todo_list.xml
         ListView todo_list_view = (ListView) view.findViewById(R.id.app_list); //gives todo_adapter info to fragment_main's ListView
         todo_list_view.setAdapter(todo_adapter); //sets the adapter to fragment_main's list
 

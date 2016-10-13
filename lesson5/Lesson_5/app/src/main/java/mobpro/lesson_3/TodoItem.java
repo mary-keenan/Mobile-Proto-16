@@ -5,10 +5,12 @@ package mobpro.lesson_3;
  */
 public class TodoItem {
     private String name; //text in to do item
+    // Great use of an ID in TodoItem to be able to access it in SQL later!
     private Integer id; //every to do has an id we use to edit/delete it with later
 
     public TodoItem(String name, Integer id) {
-        this.name=name;
+        // Put some spaces here
+        this.name = name;
         this.id = id;
     }
 
