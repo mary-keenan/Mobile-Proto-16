@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         String default_val = getResources().getString(R.string.saved_background_default);
         int intDefault = Color.parseColor(default_val);
         String key = getString(R.string.saved_background); // 'key'
-        int color_hex = sharedPref.getInt(key, intDefault); //THIS LINE
+        int color_hex = sharedPref.getInt(key, intDefault); //THIS LINE ???
         changeBackgroundColor(color_hex);
         myColor = color_hex;
         // ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(getString(R.string.saved_background), myColor);
-        editor.commit();
+        editor.apply(); // apparently you should use apply instead
     }
 
     public void setMyColor(int color) {
