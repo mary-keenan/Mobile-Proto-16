@@ -33,6 +33,10 @@ import java.util.List;
  */
 public class MainActivityFragment extends Fragment {
 
+    // Again, long lines. I won't take points off, just try to avoid it next time. =)
+    // Also, a general thing. Try taking away Debug statements when you're done and you submit.
+    // Makes your code look more professional.
+
     private final String TAG = this.getClass().getName();
 
     public MainActivityFragment() {
@@ -87,6 +91,8 @@ public class MainActivityFragment extends Fragment {
     }
 
     private String extractPriceFromJSON(JSONArray array) throws JSONException {
+        // So this function will return the price of the first element in the array. You could
+        // definitely easily modify it so that it returned all prices! :D
         List<String> placeholderList = new ArrayList<String>();
         for(int i=0; i<array.length();i++){ //if there were multiple JSONObjects in the array, this would parse through them (only does it once in this case)
             JSONObject stock = array.getJSONObject(i); //gets JSONObject number i
